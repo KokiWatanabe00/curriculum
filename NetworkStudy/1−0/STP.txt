@@ -1,0 +1,38 @@
+問１
+冗長構成において、ルートブリッジに該当するスイッチの番号を答えてください。
+回答
+Switch3
+
+問２
+全てのポートの役割を答えてください。
+Switch1 F0/1:DP 
+        F0/2:RP 
+
+ルートブリッジへのルートパスコストは
+switch1-switch3=100
+switch1-switch2-switch4-switch3=219
+上側のF0/2がRPとなります。
+F0/1はRPの反対となりますのでDPとなります。
+
+Switch2 F0/1:RP
+        F0/2:DP
+
+ルートブリッジへのルートパスコストは
+Switch2-switch1-switch3=119
+Switch2-switch4-switch3=200
+そのためF0/1がRPとなります。
+F0/2はRPの反対となりますのでDPとなります。
+
+Switch3 E0/1:DP
+        E0/2:DP
+Switch3はルートブリッジの為、ポートは指定ポートとなります。
+
+Switch4 E0/1:RP
+        E0/2:RP
+ルートブリッジへのルートパスコストは
+Switch4-switch1=100
+Switch4-switch2-switch1-switch3=219
+その為、E0/2がRPとなります。
+E0/1はRPの反対となりますのでDPとなります。
+
+
