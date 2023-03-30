@@ -27,12 +27,12 @@ Switch3 E0/1:DP
         E0/2:DP
 Switch3はルートブリッジの為、ポートは指定ポートとなります。
 
-Switch4 E0/1:RP
+Switch4 E0/1:BP
         E0/2:RP
 ルートブリッジへのルートパスコストは
 Switch4-switch1=100
 Switch4-switch2-switch1-switch3=219
-その為、E0/2がRPとなります。
+その為、E0/2がBPとなります。
 E0/1はRPの反対となりますのでDPとなります。
 
 
