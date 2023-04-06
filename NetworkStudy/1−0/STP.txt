@@ -15,24 +15,25 @@ switch1-switch2-switch4-switch3=219
 F0/1はRPの反対となりますのでDPとなります。
 
 Switch2 F0/1:RP
-        F0/2:DP
+        F0/2:BP
 
 ルートブリッジへのルートパスコストは
 Switch2-switch1-switch3=119
 Switch2-switch4-switch3=200
 そのためF0/1がRPとなります。
-F0/2はRPの反対となりますのでDPとなります。
+F0/2はSwitch4のE0/1がDPとなるため、ルート、指定どちらにも当てはまらないのでBPとなります。
 
 Switch3 E0/1:DP
         E0/2:DP
 Switch3はルートブリッジの為、ポートは指定ポートとなります。
 
-Switch4 E0/1:BP
+Switch4 E0/1:DP
         E0/2:RP
 ルートブリッジへのルートパスコストは
 Switch4-switch1=100
 Switch4-switch2-switch1-switch3=219
-その為、E0/2がBPとなります。
-E0/1はRPの反対となりますのでDPとなります。
+Switch2とSwitch４のルートパスコストを比べるとSwitch４の方がすく小さい為、
+E0/1がDPとなります。
+E0/2はSwitch3のE0/2の反対のためRPとなります。
 
 
